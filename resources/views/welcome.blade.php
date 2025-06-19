@@ -36,33 +36,13 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="hidden lg:flex items-center space-x-8">
-                        <div class="flex space-x-6">
-                            <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600 px-2">Products</a>
-                            <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600 px-2">Suppliers</a>
-                            <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600 px-2">Purchases</a>
-                            <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600 px-2">Sales</a>
-                        </div>
-                        <div class="flex items-center space-x-18">
-                            @if (Route::has('login'))
-                                @auth
-                                    <a href="{{ url('/dashboard') }}" class="text-sm font-semibold leading-6 text-gray-900">Dashboard</a>
-                                @else
-                                    <a href="{{ route('login') }}" class="text-sm font-semibold leading-6 text-gray-900 mr-4">Log in</a>
-                                    @if (Route::has('register'))
-                                        <a href="{{ route('register') }}" class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600 px-2">Register</a>
-                                    @endif
-                                @endauth
-                            @endif
-                            <a href="#" class="rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Log in</a>
-                        </div>
-                        <div class="flex items-center space-x-6">
-                            @if (Route::has('register'))
-                                <a href="{{ route('register') }}" class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600 px-2">Register</a>
-                            @endif
-                            <a href="#" class="rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Register</a>
-                        </div>
+                    <div class="hidden lg:flex lg:gap-x-12">
+                        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Products</a>
+                        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Suppliers</a>
+                        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Purchases</a>
+                        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Sales</a>
                     </div>
+
 
                     
                     <div class="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -86,11 +66,6 @@
                         <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50">Purchases</a>
                         <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50">Sales</a>
                     </div>
-
-                    {{-- <div class="hidden lg:flex lg:gap-x-12">
-                        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Products</a>
-                        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Suppliers</a>
-                    </div> --}}
                     <div class="border-t border-gray-200 pb-3 pt-4">
                         @if (Route::has('login'))
                             @auth
